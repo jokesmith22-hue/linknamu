@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 배경 -->
+  <rect width="200" height="200" fill="#d1fae5"/>
+
+  <!-- 수술복 (상의) -->
+  <path d="M30 200c4-38 32-58 70-58s66 20 70 58z" fill="#1e3a8a"/>
+  <path d="M84 144l16 24 16-24" fill="none" stroke="#172554" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- 목 -->
+  <rect x="88" y="124" width="24" height="24" rx="6" fill="#f2c6a0"/>
+
+  <!-- 귀 -->
+  <ellipse cx="58" cy="98" rx="8" ry="11" fill="#eab48c"/>
+  <ellipse cx="142" cy="98" rx="8" ry="11" fill="#eab48c"/>
+
+  <!-- 얼굴 -->
+  <ellipse cx="100" cy="96" rx="42" ry="46" fill="#f2c6a0"/>
+
+  <!-- 수술모 -->
+  <path d="M56 82c0-30 20-48 44-48s44 18 44 48c-14-6-28-8-44-8s-30 2-44 8z" fill="#7dd3fc"/>
+  <path d="M56 82c14-6 28-8 44-8s30 2 44 8" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+  <!-- 수술모 무늬 -->
+  <g fill="#e0f2fe" opacity="0.8">
+    <circle cx="80" cy="54" r="3"/><circle cx="100" cy="46" r="3"/><circle cx="120" cy="54" r="3"/>
+    <circle cx="90" cy="66" r="3"/><circle cx="112" cy="66" r="3"/><circle cx="70" cy="70" r="3"/><circle cx="130" cy="70" r="3"/>
+  </g>
+  <!-- 수술모 끈 -->
+  <path d="M140 80l14 14M140 80l16 6" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 눈썹 -->
+  <path d="M72 88q10-6 20 0M108 88q10-6 20 0" fill="none" stroke="#5b3a29" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- 안경 -->
+  <g fill="#ffffff" fill-opacity="0.35" stroke="#1f2937" stroke-width="4">
+    <rect x="66" y="92" width="30" height="22" rx="8"/>
+    <rect x="104" y="92" width="30" height="22" rx="8"/>
+  </g>
+  <path d="M96 101q4-4 8 0M66 100l-8-3M134 100l8-3" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 눈 -->
+  <circle cx="81" cy="103" r="3.5" fill="#1f2937"/>
+  <circle cx="119" cy="103" r="3.5" fill="#1f2937"/>
+
+  <!-- 코, 입 -->
+  <path d="M100 108q-4 10 2 12" fill="none" stroke="#c98b63" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88 126q12 9 24 0" fill="none" stroke="#9a4a3a" stroke-width="3.5" stroke-linecap="round"/>
+
+</svg>
