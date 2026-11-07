@@ -30,6 +30,7 @@ export default async function Home() {
               id={link.id}
               title={link.title}
               url={link.url}
+              emoji={link.emoji}
               clicks={dbEnabled ? counts[link.id] ?? 0 : undefined}
             />
           </li>
