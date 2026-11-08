@@ -1,18 +1,11 @@
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import ProfileHeader from "@/components/ProfileHeader";
 import { profile } from "@/data/profile";
-import { getClickCounts } from "@/lib/mongodb";
-
-// 클릭 수를 매 요청마다 새로 읽어옵니다.
-export const dynamic = "force-dynamic";
 
 // wireframe.png 구조:
 //   ① 원형 프로필 사진  ② 이름  ③ 한 줄 소개
-//   ④ 링크 카드 3개 (세로 배치)
-export default async function Home() {
-  const counts = await getClickCounts();
-  const dbEnabled = Boolean(process.env.MONGODB_URI);
-
+//   ④ 링크 카드 3개 (세로 배치) — 클릭 수는 페이지가 열린 뒤 /api/click 에서 받아옴
+export default function Home() {
   return (
     <main className="relative mx-auto flex min-h-dvh w-full max-w-[440px] flex-col items-center px-7 pt-20 pb-20 sm:px-8 sm:pt-24">
       {/* 글래스 카드 뒤에서 은은하게 비치는 따뜻한 빛 번짐 (장식용) */}
@@ -30,23 +23,7 @@ export default async function Home() {
       />
 
       {/* ④ 링크 카드 목록 */}
-      <ul className="mt-11 flex w-full flex-col gap-4">
-        {profile.links.map((link, i) => (
-          <li
-            key={link.id}
-            className="animate-rise"
-            style={{ animationDelay: `${120 + i * 70}ms` }}
-          >
-            <LinkCard
-              id={link.id}
-              title={link.title}
-              url={link.url}
-              emoji={link.emoji}
-              clicks={dbEnabled ? counts[link.id] ?? 0 : undefined}
-            />
-          </li>
-        ))}
-      </ul>
+      <LinkList links={profile.links} />
     </main>
   );
 }
